@@ -1,9 +1,6 @@
 รายละเอียด 
-วิธีการ setup 
-1. อัปโหลดขึ้น git hub
-2. ทำการอัปโหลดบนเว็ปไซต์ผ่าน vercel
 
-วิธีการรัน 
+วิธีการ run
 เข้าเว็ปไซต์ https://xogame-cyan.vercel.app/
 
 algorithm ที่ใช้งาน 
