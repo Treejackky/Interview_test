@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+รายละเอียด 
+วิธีการ setup 
+1. อัปโหลดขึ้น git hub
+2. ทำการอัปโหลดบนเว็ปไซต์ผ่าน vercel
 
-## Getting Started
+วิธีการรัน 
+เข้าเว็ปไซต์ https://xogame-cyan.vercel.app/
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+algorithm ที่ใช้งาน 
+1. สร้าง function ขึ้นมาเพื่อเช็คทุกครั้งที่ทำการวาง x or o ด้วยการ for loop board ณ ปัจจุบัน เช็ค row, column, column แทยงมุมซ้าย, column แทยงมุมขวา loop
+2. หากมีแนวที่วางครบจำนวน len ของ for อันนึงให้ break แล้วชนะทันที เช่น [[O,O,O],[...],[...]] ,[[O,'',''],[O,'',''],[O,'','']] ,[[O,'',''],['','',O,],['','',O]], [['','',O],['','',O],[O,'','']]  จะให้ชนะเลย
+3. หาก lenght ของค่า x or o  ไม่มีตัวไหนที่ loop เช็๋คเจอ(lenght x or o เท่ากับ lenght ของ board) จะเปลี่ยนสถานะเข้าเงื่อนไข else เป็น draw = 1 จากเดิมเป็น O แล้ว set winner = 1
+4. หากได้ผลลัพธ์แล้ว จะทำการเด้ง pop up เพื่อทำการ save, restart,
+     4.1 เลือก save จำทำการยิง api ไปที่หลังบ้านเพื่อทำการสร้างข้อมูลของ board ที่เราเล่น (link backend)
+     4.2 ถ้ากด restart จะทำการ init ค่าใหม่
+5. เลือก history จะทำการ fecth ข้อมูล board ที่เราได้ทำการบันทึกไปก่อนหน้า
