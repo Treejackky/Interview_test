@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 table{
+  margin: 0 auto;
   width: 30%;
 }
 th, td {
@@ -12,3 +13,52 @@ th, td {
   width: 50px;
   height: 100px;
 }
+
+.input-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 100vw;
+}
+
+.input-bar button{
+  justify-content: right;
+}
+
+.winner {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.winner-col{
+ 
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+
+
+}
+.restart-button{
+   color:rgb(0, 241, 20);
+}
+
+.content-board{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-detail{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  border: 1px solid black;
+}
+
+
